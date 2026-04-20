@@ -29,7 +29,6 @@ h1 {
   font-weight: 600;
 }
 
-/* ── Toolbar ── */
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -59,7 +58,6 @@ h1 {
   letter-spacing: 0.08em;
 }
 
-/* Colors */
 .colors {
   display: flex;
   gap: 7px;
@@ -85,7 +83,6 @@ h1 {
   transform: scale(1.2);
 }
 
-/* Brush size */
 input[type="range"] {
   -webkit-appearance: none;
   width: 120px;
@@ -107,7 +104,6 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-/* Tool buttons */
 .tool-btns {
   display: flex;
   gap: 8px;
@@ -142,7 +138,6 @@ input[type="range"]::-webkit-slider-thumb {
   outline-offset: 3px;
 }
 
-/* Clear button */
 .action-btn {
   padding: 8px 18px;
   border-radius: 30px;
@@ -166,7 +161,6 @@ input[type="range"]::-webkit-slider-thumb {
   outline-offset: 3px;
 }
 
-/* Canvas */
 .canvas-wrapper {
   border-radius: 20px;
   overflow: hidden;
