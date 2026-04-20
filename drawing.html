@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drawing App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🎨 Drawing App</h1>
+  <p class="instructions">Click and drag to draw!</p>
+
+  <div class="toolbar">
+
+    <!-- Color Options -->
+    <div class="tool-group">
+      <label>Colors</label>
+      <div class="colors">
+        <button class="color-btn active" style="background:#e74c3c" data-color="#e74c3c" title="Red"></button>
+        <button class="color-btn" style="background:#e67e22" data-color="#e67e22" title="Orange"></button>
+        <button class="color-btn" style="background:#f1c40f" data-color="#f1c40f" title="Yellow"></button>
+        <button class="color-btn" style="background:#2ecc71" data-color="#2ecc71" title="Green"></button>
+        <button class="color-btn" style="background:#3498db" data-color="#3498db" title="Blue"></button>
+        <button class="color-btn" style="background:#9b59b6" data-color="#9b59b6" title="Purple"></button>
+        <button class="color-btn" style="background:#ff69b4" data-color="#ff69b4" title="Pink"></button>
+        <button class="color-btn" style="background:#1abc9c" data-color="#1abc9c" title="Teal"></button>
+        <button class="color-btn" style="background:#2c3e50" data-color="#2c3e50" title="Dark"></button>
+      </div>
+    </div>
+
+    <!-- Brush Size -->
+    <div class="tool-group">
+      <label>Brush Size: <span id="size-label">4</span></label>
+      <input type="range" id="brushSize" min="1" max="30" value="4" />
+    </div>
+
+    <!-- Tools -->
+    <div class="tool-group">
+      <label>Tools</label>
+      <div class="tool-btns">
+        <button id="brushBtn" class="tool-btn active">✏️ Brush</button>
+        <button id="eraserBtn" class="tool-btn">🧹 Eraser</button>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="tool-group">
+      <label>Actions</label>
+      <button id="clearBtn" class="action-btn">🗑️ Clear All</button>
+    </div>
+
+  </div>
+
+  <div class="canvas-wrapper">
+    <canvas id="myCanvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

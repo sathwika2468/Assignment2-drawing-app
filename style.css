@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff9f0;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 28px 20px;
+  gap: 18px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #ff6b6b;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 0px #ffd6d6;
+}
+
+.instructions {
+  font-size: 0.9rem;
+  color: #f0a500;
+  font-weight: 600;
+}
+
+/* ── Toolbar ── */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 20px rgba(255, 107, 107, 0.15);
+  border: 2px solid #ffe0e0;
+  width: 100%;
+  max-width: 660px;
+}
+
+.tool-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tool-group label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Colors */
+.colors {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.color-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+  padding: 0;
+}
+
+.color-btn:hover {
+  transform: scale(1.2);
+}
+
+.color-btn.active {
+  border-color: #333;
+  transform: scale(1.2);
+}
+
+/* Brush size */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 120px;
+  height: 6px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ff6b6b, #ffd93d);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ff6b6b;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+/* Tool buttons */
+.tool-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.tool-btn {
+  padding: 8px 14px;
+  border-radius: 30px;
+  border: 2px solid #ffe0e0;
+  background: #fff9f0;
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.tool-btn:hover {
+  transform: translateY(-2px);
+  border-color: #ff6b6b;
+}
+
+.tool-btn.active {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.tool-btn:focus-visible {
+  outline: 3px solid #ff6b6b;
+  outline-offset: 3px;
+}
+
+/* Clear button */
+.action-btn {
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 2px solid #ffd93d;
+  background: #fff9f0;
+  color: #e67e22;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.action-btn:hover {
+  background: #ffd93d;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+.action-btn:focus-visible {
+  outline: 3px solid #ffd93d;
+  outline-offset: 3px;
+}
+
+/* Canvas */
+.canvas-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(255, 107, 107, 0.2);
+  border: 3px solid #ffe0e0;
+}
+
+canvas {
+  display: block;
+  background: #ffffff;
+  cursor: crosshair;
+}
