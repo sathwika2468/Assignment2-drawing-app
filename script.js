@@ -1,7 +1,4 @@
-// Assignment 2 - Interactive Drawing App
-// Sathwika Nevoori
 
-// Step 4: Select canvas, context, and buttons
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var clearBtn = document.getElementById("clearBtn");
@@ -11,16 +8,13 @@ var brushSize = document.getElementById("brushSize");
 var sizeLabel = document.getElementById("size-label");
 var colorBtns = document.querySelectorAll(".color-btn");
 
-// Step 5: Set the canvas size
 canvas.width = 620;
 canvas.height = 420;
 
-// Track drawing state
 var isDrawing = false;
 var currentColor = "#e74c3c";
 var currentTool = "brush";
 
-// ── Color picker ──
 colorBtns.forEach(function(btn) {
   btn.addEventListener("click", function() {
     colorBtns.forEach(function(b) { b.classList.remove("active"); });
@@ -32,12 +26,10 @@ colorBtns.forEach(function(btn) {
   });
 });
 
-// ── Brush size slider ──
 brushSize.addEventListener("input", function() {
   sizeLabel.textContent = brushSize.value;
 });
 
-// ── Tool buttons ──
 brushBtn.addEventListener("click", function() {
   currentTool = "brush";
   brushBtn.classList.add("active");
@@ -52,14 +44,12 @@ eraserBtn.addEventListener("click", function() {
   canvas.style.cursor = "cell";
 });
 
-// Step 6: mousedown - start drawing
 canvas.addEventListener("mousedown", function(e) {
   isDrawing = true;
   ctx.beginPath();
   ctx.moveTo(e.offsetX, e.offsetY);
 });
 
-// Step 7: mousemove - draw while mouse is held
 canvas.addEventListener("mousemove", function(e) {
   if (!isDrawing) return;
 
@@ -78,7 +68,6 @@ canvas.addEventListener("mousemove", function(e) {
   ctx.stroke();
 });
 
-// Step 8: mouseup - stop drawing
 canvas.addEventListener("mouseup", function() {
   isDrawing = false;
 });
